@@ -1,26 +1,79 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <main-header />
+    <Menu />
+    <About />
+    <Portfolio />
+    <Contact />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import MainHeader from "./components/mainHeader.vue";
+import Menu from "./components/menu.vue";
+import About from "./components/about.vue";
+import Portfolio from "./components/portfolio.vue";
+import Contact from "./components/contact.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    MainHeader,
+    Menu,
+    About,
+    Portfolio,
+    Contact,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(240, 238, 238);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  min-height: 2200px;
+  z-index: -10;
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotateEnter {
+  0% {
+    transform: rotateY(100deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes fillBar {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes climbDown {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 </style>
