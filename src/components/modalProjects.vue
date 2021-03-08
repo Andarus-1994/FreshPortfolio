@@ -36,13 +36,13 @@ export default {
 .modal {
   position: fixed;
   background: rgb(255, 255, 255);
-  width: 50%;
-  min-height: 50vh;
+  width: 800px;
+
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  top: 10vh;
+  top: 5%;
   z-index: 25;
   box-shadow: 0px 0px 10px 0px black;
   animation: enterModal 1.5s;
@@ -75,12 +75,15 @@ export default {
 }
 .modal img {
   width: 100%;
+  max-height: 40vh;
   margin-bottom: 20px;
+  object-fit: cover;
 }
 .modal p {
   padding: 20px;
-  width: 50vh;
+  width: 70%;
   margin: 0 auto;
+  margin-bottom: 30px;
   text-indent: 25px;
   font-size: 1rem;
   font-family: "Raleway", sans-serif;
@@ -90,9 +93,14 @@ export default {
 }
 
 .modal .closeButton {
+  position: absolute;
   cursor: pointer;
   width: 20px;
-  margin: 0 auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
   font-size: 1.5rem;
 }
 </style>

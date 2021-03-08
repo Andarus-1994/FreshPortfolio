@@ -19,6 +19,7 @@
         <textarea type="text" name="message" required />
         <button type="submit">Send</button>
       </form>
+      <div class="ArrowUp" v-on:click="scrollToTop"><p>&#8607;</p></div>
     </div>
   </div>
 </template>
@@ -27,6 +28,11 @@
 export default {
   name: "Contact",
   components: {},
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
+  },
 };
 </script>
 
@@ -36,7 +42,7 @@ export default {
   padding-top: 50px;
 }
 .contact {
-  height: 50vh;
+  position: relative;
   padding-top: 20vh;
   padding-bottom: 10vh;
   background: #242833;
@@ -101,5 +107,21 @@ export default {
 }
 .contact button:hover {
   background: #2f3442;
+}
+
+.contact .ArrowUp > p {
+  cursor: pointer;
+  position: absolute;
+  color: #4f5568;
+  padding: 10px 25px;
+  font-size: 3rem;
+  border: 1px solid #3b4153;
+  right: 20vh;
+  top: 20vh;
+  transition: 0.4s;
+}
+.contact .ArrowUp > p:hover {
+  color: #737886;
+  border: 1px solid #737886;
 }
 </style>

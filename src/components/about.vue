@@ -109,7 +109,7 @@ export default {
 }
 
 .about {
-  min-height: 200px;
+  min-height: 50vh;
 }
 .about > h1 {
   text-align: center;
@@ -118,7 +118,7 @@ export default {
   font-family: "Heebo", sans-serif;
   margin-top: 150px;
   margin-bottom: 100px;
-  animation: enter 2s;
+  animation: enter 1s;
 }
 
 .about > ul {
@@ -136,7 +136,21 @@ export default {
   opacity: 1;
   padding: 0;
   text-align: center;
-  animation: enter 2.5s;
+}
+
+.about > ul > li:nth-child(1) {
+  animation: figure1 2s;
+}
+.about > ul > li:nth-child(2) {
+  animation: figure2 2.5s;
+}
+
+.about > ul > li:nth-child(3) {
+  animation: figure3 3s;
+}
+
+.about > ul > li:nth-child(4) {
+  animation: figure4 3s;
 }
 
 .about > ul li > h1 {

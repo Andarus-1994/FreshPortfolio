@@ -44,6 +44,59 @@ body {
 @keyframes enter {
   0% {
     opacity: 0;
+    transform: translateX(-200px);
+  }
+  10% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes figure1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes figure2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes figure3 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes figure4 {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
@@ -54,6 +107,9 @@ body {
   0% {
     transform: rotateY(100deg);
   }
+  20% {
+    transform: rotateY(100deg);
+  }
   100% {
     transform: rotateY(0deg);
   }
@@ -61,6 +117,9 @@ body {
 
 @keyframes fillBar {
   0% {
+    transform: translateX(-200px);
+  }
+  25% {
     transform: translateX(-200px);
   }
   100% {

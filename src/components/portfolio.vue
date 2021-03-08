@@ -1,7 +1,8 @@
 <template>
   <div class="portfolio" id="portfolio">
-    <h1>Portfolio - Personal Projects</h1>
-    <ul>
+    <div class="triggerPortfolio" ref="triggerPortfolio"></div>
+    <h1 v-if="showPortfolio">Portfolio - Personal Projects</h1>
+    <ul v-if="showPortfolio">
       <li v-on:click="displayModal(projectDetails[0].id)">
         <img src="../assets/webD.jpg" alt="blog" />
         <h3>Blog</h3>
@@ -13,6 +14,10 @@
       <li v-on:click="displayModal(projectDetails[2].id)">
         <img src="../assets/shop.jpg" alt="Blog" />
         <h3>E-Commerce Shop</h3>
+      </li>
+      <li v-on:click="displayModal(projectDetails[3].id)">
+        <img src="../assets/design.jpg" alt="designWebsite" />
+        <h3>Website</h3>
       </li>
     </ul>
     <div v-for="(project, index) in projectDetails" :key="index">
@@ -37,6 +42,7 @@ export default {
   },
   data() {
     return {
+      showPortfolio: false,
       showModal: { state: false, id: 0 },
       projectDetails: [
         {
@@ -60,6 +66,12 @@ export default {
             "This is an web application for E-Commerce (online shop) and it is created using Laravel for Back End and React for Front End. I focused mostly on creating functionality and just a bit on design. It contains the following main functionalities: creating user account/reseting user's password (via email), display products, dashboard for the admin to add / remove products, payment method (using stripe).  ",
           link: "",
         },
+        {
+          id: 4,
+          img: "website.jpg",
+          text: "Website design graphic example.  ",
+          link: "",
+        },
       ],
     };
   },
@@ -69,6 +81,19 @@ export default {
       this.showModal.id = id;
       console.log(this.showModal);
     },
+    PortfolioTrigger() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio > 0) {
+            this.showPortfolio = true;
+          }
+        });
+      });
+      observer.observe(this.$refs.triggerPortfolio);
+    },
+  },
+  mounted() {
+    this.PortfolioTrigger();
   },
 };
 </script>
@@ -79,14 +104,21 @@ export default {
   margin-top: 100px;
   padding-bottom: 100px;
   overflow: hidden;
+  min-height: 30vh;
+}
+
+.portfolio .triggerPortfolio {
+  height: 8vh;
+  width: 100%;
 }
 .portfolio > h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 2.5rem;
   font-family: "Heebo", sans-serif;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
+  animation: enter 1s;
 }
 
 .portfolio ul {
@@ -109,6 +141,20 @@ export default {
   text-align: center;
 }
 
+.portfolio > ul > li:nth-child(1) {
+  animation: figure1 2s;
+}
+.portfolio > ul > li:nth-child(2) {
+  animation: figure2 2.5s;
+}
+
+.portfolio > ul > li:nth-child(3) {
+  animation: figure3 3s;
+}
+
+.portfolio > ul > li:nth-child(4) {
+  animation: figure4 3s;
+}
 .portfolio ul li img {
   background: rgb(43, 115, 128);
   width: 100%;
