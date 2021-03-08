@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <Loader v-if="!loadPage" />
+  <div class="content" v-if="loadPage">
     <main-header />
     <Menu />
     <About />
@@ -14,6 +15,7 @@ import Menu from "./components/menu.vue";
 import About from "./components/about.vue";
 import Portfolio from "./components/portfolio.vue";
 import Contact from "./components/contact.vue";
+import Loader from "./components/loaderPage.vue";
 export default {
   name: "App",
   components: {
@@ -22,6 +24,21 @@ export default {
     About,
     Portfolio,
     Contact,
+    Loader,
+  },
+  data() {
+    return {
+      loadPage: false,
+    };
+  },
+  mounted() {
+    document.onreadystatechange = () => {
+      setTimeout(() => {
+        if (document.readyState == "complete") {
+          this.loadPage = true;
+        }
+      }, 3000);
+    };
   },
 };
 </script>
@@ -37,8 +54,20 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  min-height: 2200px;
   z-index: -10;
+}
+
+.content {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes enter {

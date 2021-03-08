@@ -124,4 +124,10 @@ export default {
   color: #737886;
   border: 1px solid #737886;
 }
+
+@media screen and (max-width: 992px) {
+  .contact .ArrowUp > p {
+    right: 1vh;
+  }
+}
 </style>

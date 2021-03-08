@@ -1,6 +1,6 @@
 <template>
   <div class="mainHeader" id="home">
-    <lines />
+    <lines :number="30" />
     <h1>Hello, I'm <span>Andrei</span>.</h1>
     <h1>I'm a junior Web Developer.</h1>
     <a href="#portfolio">
@@ -14,20 +14,6 @@ import lines from "./linesMain.vue";
 export default {
   name: "mainHeader",
   components: { lines },
-  data() {
-    return {
-      loadPage: false,
-    };
-  },
-  mounted() {
-    document.onreadystatechange = () => {
-      setTimeout(() => {
-        if (document.readyState == "complete") {
-          this.loadPage = true;
-        }
-      }, 1000);
-    };
-  },
 };
 </script>
 
@@ -73,5 +59,11 @@ export default {
 .mainHeader .workButton:hover {
   background: #59e2d9;
   border: 2px solid #59e2d9;
+}
+
+@media screen and (max-width: 992px) {
+  .mainHeader h1 {
+    font-size: 2rem;
+  }
 }
 </style>

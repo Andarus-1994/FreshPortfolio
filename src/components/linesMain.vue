@@ -1,48 +1,28 @@
 <template>
   <div class="lines">
-    <div class="line" :style="styleLinePosition2"></div>
-    <div class="line" :style="styleLinePosition"></div>
-    <div class="line" :style="styleLinePosition3"></div>
-    <div class="line" :style="styleLinePosition4"></div>
-    <div class="line" :style="styleLinePosition5"></div>
-    <div class="line" :style="styleLinePosition6"></div>
+    <div v-for="n in number" :key="n" class="line" :style="styleLine()"></div>
   </div>
 </template>
 
 <script>
 export default {
   name: "lines",
-  data() {
-    return {
-      styleLinePosition: {
-        top: "-30vh",
-        left: "15%",
-      },
-      styleLinePosition2: {
-        top: "-25vh",
-        left: "30%",
-        width: "0.5px",
-      },
-      styleLinePosition3: {
-        top: "-60vh",
-        left: "70%",
-      },
-      styleLinePosition4: {
-        top: "-30vh",
-        left: "80%",
-        animationDelay: "5s",
-      },
-      styleLinePosition5: {
-        top: "-30vh",
-        left: "50%",
-        animationDelay: "2s",
-      },
-      styleLinePosition6: {
-        top: "-10vh",
-        left: "100%",
-        animationDuration: "25s",
-      },
-    };
+  props: {
+    number: Number,
+  },
+
+  methods: {
+    random(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    },
+    styleLine() {
+      return {
+        top: this.random(-30, -80) + "vh",
+        left: this.random(10, 100) + "%",
+        animationDelay: this.random(0, 4) + "s",
+        animationDuration: this.random(20, 30) + "s",
+      };
+    },
   },
 };
 </script>
@@ -54,7 +34,7 @@ export default {
   transform: rotate(30deg);
   height: 100vh;
   width: 1.5px;
-  animation: coloring 20s infinite;
+  animation: coloring infinite;
   z-index: 0;
 }
 
@@ -84,5 +64,11 @@ export default {
   height: 5px;
   bottom: 0;
   left: -2px;
+}
+
+@media screen and (max-width: 992px) {
+  .lines {
+    display: none;
+  }
 }
 </style>
