@@ -83,7 +83,8 @@ export default {
   padding: 20px;
   width: 70%;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-bottom: 70px;
   text-indent: 25px;
   font-size: 1rem;
   font-family: "Raleway", sans-serif;

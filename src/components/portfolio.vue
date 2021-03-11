@@ -8,15 +8,19 @@
         <h3>Blog</h3>
       </li>
       <li v-on:click="displayModal(projectDetails[1].id)">
+        <img src="../assets/design.jpg" alt="blog" />
+        <h3>Construct CO</h3>
+      </li>
+      <li v-on:click="displayModal(projectDetails[2].id)">
         <img src="../assets/graph.jpg" alt="Blog" />
         <h3>Recipes</h3>
       </li>
-      <li v-on:click="displayModal(projectDetails[2].id)">
-        <img src="../assets/shop.jpg" alt="Blog" />
+      <li v-on:click="displayModal(projectDetails[3].id)">
+        <img src="../assets/webcomerce.jpg" alt="Blog" />
         <h3>E-Commerce Shop</h3>
       </li>
-      <li v-on:click="displayModal(projectDetails[3].id)">
-        <img src="../assets/design.jpg" alt="designWebsite" />
+      <li v-on:click="displayModal(projectDetails[4].id)">
+        <img src="../assets/website.jpg" alt="designWebsite" />
         <h3>Website</h3>
       </li>
     </ul>
@@ -54,20 +58,26 @@ export default {
         },
         {
           id: 2,
+          img: "construct.png",
+          text: "This is an website for a construction company. ",
+          link: "https://andarus-1994.github.io/ConstructionCO/",
+        },
+        {
+          id: 3,
           img: "recipes.png",
           text:
             "This web application is a recipe list that helps the user to manage easier their recipes which also has a description and a list of ingredients and steps to prepare the wanted food. We can also add new recipes or ask for random ones from the fake mocked API.   ",
           link: "https://andarus-1994.github.io/Recipes/",
         },
         {
-          id: 3,
+          id: 4,
           img: "shopApp.jpg",
           text:
             "This is an web application for E-Commerce (online shop) and it is created using Laravel for Back End and React for Front End. I focused mostly on creating functionality and just a bit on design. It contains the following main functionalities: creating user account/reseting user's password (via email), display products, dashboard for the admin to add / remove products, payment method (using stripe).  ",
           link: "",
         },
         {
-          id: 4,
+          id: 5,
           img: "website.jpg",
           text: "Website design graphic example.  ",
           link: "",
