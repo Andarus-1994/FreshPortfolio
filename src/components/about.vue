@@ -78,6 +78,10 @@ export default {
         },
         {
           name: "Spring",
+          skill: "5",
+        },
+        {
+          name: "SCSS",
           skill: "6",
         },
       ],

@@ -135,7 +135,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-column-gap: 50px;
-  grid-row-gap: 50px;
+  grid-row-gap: 20px;
   grid-auto-rows: 1fr;
   list-style-type: none;
   width: 80%;
@@ -147,7 +147,8 @@ export default {
 .portfolio ul li {
   position: relative;
   cursor: pointer;
-  width: 100%;
+  width: 90%;
+  height: 80%;
   text-align: center;
 }
 
