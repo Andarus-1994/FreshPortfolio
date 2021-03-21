@@ -49,7 +49,7 @@ ul li {
 }
 
 ul li .barName {
-  background: #4bcac2;
+  background: #48b6ae;
   color: white;
   width: 120px;
   padding: 10px 20px;

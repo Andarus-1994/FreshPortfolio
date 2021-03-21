@@ -1,6 +1,6 @@
 <template>
-  <div class="about" id="about">
-    <div class="triggerAbout" ref="aboutTrigger"></div>
+  <div class="about" id="about" ref="aboutTrigger">
+    <div class="triggerAbout"></div>
     <h1 v-if="showAbout">- About -</h1>
     <ul v-if="showAbout">
       <li>
@@ -90,13 +90,17 @@ export default {
 
   methods: {
     scrollTrigger() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.intersectionRatio > 0) {
-            this.showAbout = true;
-          }
-        });
-      });
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            console.log(entry);
+            if (entry.intersectionRatio > 0) {
+              this.showAbout = true;
+            }
+          });
+        },
+        { threshold: 1 }
+      );
       observer.observe(this.$refs.aboutTrigger);
     },
   },

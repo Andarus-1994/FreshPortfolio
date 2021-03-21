@@ -21,6 +21,9 @@
       </form>
       <div class="ArrowUp" v-on:click="scrollToTop"><p>&#8607;</p></div>
     </div>
+    <div class="bottomContact">
+      <p>O. Andrei - <span>&#169; 2020</span></p>
+    </div>
   </div>
 </template>
 
@@ -112,7 +115,7 @@ export default {
 .contact .ArrowUp > p {
   cursor: pointer;
   position: absolute;
-  color: #4f5568;
+  color: #5e657a;
   padding: 10px 25px;
   font-size: 3rem;
   border: 1px solid #3b4153;
@@ -123,6 +126,26 @@ export default {
 .contact .ArrowUp > p:hover {
   color: #737886;
   border: 1px solid #737886;
+}
+
+.bottomContact {
+  background: #303544;
+  height: 5vh;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.bottomContact p {
+  position: relative;
+  font-size: 1.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.bottomContact p span {
+  color: rgb(62, 112, 112);
 }
 
 @media screen and (max-width: 992px) {

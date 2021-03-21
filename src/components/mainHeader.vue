@@ -32,7 +32,7 @@ export default {
 }
 .mainHeader h1 {
   color: white;
-  font-size: 3rem;
+  font-size: 3.5rem;
   z-index: 20;
 }
 .mainHeader a {

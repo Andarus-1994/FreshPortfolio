@@ -92,13 +92,16 @@ export default {
       console.log(this.showModal);
     },
     PortfolioTrigger() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.intersectionRatio > 0) {
-            this.showPortfolio = true;
-          }
-        });
-      });
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.intersectionRatio > 0) {
+              this.showPortfolio = true;
+            }
+          });
+        },
+        { threshold: 1 }
+      );
       observer.observe(this.$refs.triggerPortfolio);
     },
   },

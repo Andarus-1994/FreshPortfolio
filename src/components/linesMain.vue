@@ -30,17 +30,17 @@ export default {
 <style>
 .lines .line {
   position: absolute;
-  background: #535353;
+  background: #696969;
   transform: rotate(30deg);
-  height: 100vh;
-  width: 1.5px;
+  height: 120vh;
+  width: 1px;
   animation: coloring infinite;
   z-index: 0;
 }
 
 @keyframes coloring {
   0% {
-    background: #333131;
+    background: #727272;
     transform: translate(0, 0) rotate(30deg);
   }
   30% {
@@ -50,7 +50,7 @@ export default {
     transform: translate(200px, 0px) rotate(30deg);
   }
   100% {
-    background: #696868;
+    background: #5a5a5a;
     transform: translate(0px, 0px) rotate(30deg);
   }
 }

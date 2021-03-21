@@ -37,7 +37,7 @@ export default {
         if (document.readyState == "complete") {
           this.loadPage = true;
         }
-      }, 3000);
+      }, 1000);
     };
   },
 };
