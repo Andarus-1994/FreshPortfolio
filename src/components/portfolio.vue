@@ -52,14 +52,13 @@ export default {
         {
           id: 1,
           img: "blogs.png",
-          text:
-            "I created the blog website only by using Front End developing framework, Vue. ",
+          text: "Blog Website. Created using VueJS. ",
           link: "https://andarus-1994.github.io/BlogDesign/",
         },
         {
           id: 2,
           img: "construct.png",
-          text: "This is an website for a construction company. ",
+          text: "Construction Industry Website. Created using ReactJS. ",
           link: "https://andarus-1994.github.io/ConstructionCO/",
         },
         {
@@ -136,9 +135,9 @@ export default {
 
 .portfolio ul {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-column-gap: 50px;
-  grid-row-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   grid-auto-rows: 1fr;
   list-style-type: none;
   width: 80%;
@@ -150,9 +149,8 @@ export default {
 .portfolio ul li {
   position: relative;
   cursor: pointer;
-  width: 90%;
-  height: 80%;
   text-align: center;
+  transition: 0.4s;
 }
 
 .portfolio > ul > li:nth-child(1) {
@@ -179,6 +177,7 @@ export default {
 }
 
 .portfolio ul li h3 {
+  width: 100%;
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -196,6 +195,6 @@ export default {
 }
 
 .portfolio ul li:hover img {
-  opacity: 0;
+  opacity: 0.1;
 }
 </style>

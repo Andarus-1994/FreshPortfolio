@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 ul {
-  width: 500px;
+  width: 550px;
   margin: 0 auto;
   margin-top: 100px;
   padding: 0;
@@ -72,7 +72,7 @@ ul li .barFill {
 }
 
 ul li .bar h2 {
-  padding: 10px 20px;
+  padding: 10px 5px;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 0.85rem;

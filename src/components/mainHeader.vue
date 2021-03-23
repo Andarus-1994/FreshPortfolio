@@ -1,6 +1,6 @@
 <template>
   <div class="mainHeader" id="home">
-    <lines :number="30" />
+    <lines :number="20" />
     <h1>Hello, I'm <span>Andrei</span>.</h1>
     <h1>I'm a junior Web Developer.</h1>
     <a href="#portfolio">

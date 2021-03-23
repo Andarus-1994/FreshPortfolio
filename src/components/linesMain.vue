@@ -17,10 +17,10 @@ export default {
     },
     styleLine() {
       return {
-        top: this.random(-30, -80) + "vh",
-        left: this.random(10, 100) + "%",
+        top: this.random(-40, -80) + "vh",
+        left: this.random(10, 120) + "%",
         animationDelay: this.random(0, 4) + "s",
-        animationDuration: this.random(20, 30) + "s",
+        animationDuration: this.random(20, 40) + "s",
       };
     },
   },

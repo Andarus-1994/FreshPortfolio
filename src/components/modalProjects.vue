@@ -1,8 +1,13 @@
 <template>
   <div>
     <div class="modal">
-      <img :src="require(`../assets/${img}`)" />
-      <a :href="link" target="_blank">Visit</a>
+      <img :src="img ? require(`../assets/${img}`) : ``" alt="noImage" />
+      <a
+        :href="link ? link : disabled"
+        target="_blank"
+        :class="link ? '' : 'disabled'"
+        >Visit</a
+      >
       <p>{{ text }}</p>
       <div v-on:click="closeModal(id)" class="closeButton">&#10005;</div>
     </div>
@@ -37,7 +42,6 @@ export default {
   position: fixed;
   background: rgb(255, 255, 255);
   width: 800px;
-
   left: 0;
   right: 0;
   margin-left: auto;
@@ -74,8 +78,8 @@ export default {
   color: white;
 }
 .modal img {
-  width: 100%;
   max-height: 40vh;
+  width: 100%;
   margin-bottom: 20px;
   object-fit: cover;
 }
@@ -103,5 +107,15 @@ export default {
   margin-right: auto;
   bottom: 0;
   font-size: 1.5rem;
+}
+
+.modal .disabled {
+  cursor: not-allowed;
+  background-color: rgb(83, 83, 83);
+  border: none;
+  color: white;
+}
+.modal .disabled:hover {
+  background-color: rgb(83, 83, 83);
 }
 </style>
