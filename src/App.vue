@@ -148,7 +148,7 @@ body {
   0% {
     transform: translateX(-200px);
   }
-  25% {
+  15% {
     transform: translateX(-200px);
   }
   100% {

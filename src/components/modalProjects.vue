@@ -6,8 +6,8 @@
         :href="link ? link : disabled"
         target="_blank"
         :class="link ? '' : 'disabled'"
-        >Visit</a
-      >
+        >Visit <i class="fas">&#xf35d;</i>
+      </a>
       <p>{{ text }}</p>
       <div v-on:click="closeModal(id)" class="closeButton">&#10005;</div>
     </div>

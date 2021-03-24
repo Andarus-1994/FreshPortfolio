@@ -4,7 +4,9 @@
     <h1>Hello, I'm <span>Andrei</span>.</h1>
     <h1>I'm a junior Web Developer.</h1>
     <a href="#portfolio">
-      <div class="workButton">View my work <span>&#8594;</span></div>
+      <div class="workButton">
+        View my work <i class="fas fa-arrow-right"></i>
+      </div>
     </a>
   </div>
 </template>
@@ -56,9 +58,20 @@ export default {
   z-index: 10;
 }
 
+.mainHeader .workButton i {
+  color: #59e2d9;
+  transition: 0.6s;
+  z-index: 20;
+}
+
 .mainHeader .workButton:hover {
   background: #59e2d9;
   border: 2px solid #59e2d9;
+}
+
+.mainHeader .workButton:hover i {
+  color: black;
+  transform: rotate(90deg);
 }
 
 @media screen and (max-width: 992px) {
