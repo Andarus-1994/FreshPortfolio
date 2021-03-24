@@ -19,7 +19,9 @@
         <textarea type="text" name="message" required />
         <button type="submit">Send</button>
       </form>
-      <div class="ArrowUp" v-on:click="scrollToTop"><p>&#8607;</p></div>
+      <div class="ArrowUp" v-on:click="scrollToTop" v-smooth-scroll>
+        <p>&#8607;</p>
+      </div>
     </div>
     <div class="bottomContact">
       <p>O. Andrei - <span>&#169; 2020</span></p>

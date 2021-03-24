@@ -2,19 +2,19 @@
   <div>
     <nav ref="navTrigger">
       <ul>
-        <a href="#home"><li>Home</li></a>
-        <a href="#about"><li>About</li></a>
-        <a href="#portfolio"><li>Portfolio</li> </a>
-        <a href="#contact"><li>Contact</li></a>
+        <a href="#home" v-smooth-scroll><li>Home</li></a>
+        <a href="#about" v-smooth-scroll><li>About</li></a>
+        <a href="#portfolio" v-smooth-scroll><li>Portfolio</li> </a>
+        <a href="#contact" v-smooth-scroll><li>Contact</li></a>
       </ul>
     </nav>
     <div class="limit" ref="navTrigger"></div>
     <div class="nav" v-if="!showNav">
       <ul>
-        <a href="#home"><li>Home</li></a>
-        <a href="#about"><li>About</li></a>
-        <a href="#portfolio"> <li>Portfolio</li></a>
-        <a href="#contact"><li>Contact</li></a>
+        <a href="#home" v-smooth-scroll><li>Home</li></a>
+        <a href="#about" v-smooth-scroll><li>About</li></a>
+        <a href="#portfolio" v-smooth-scroll> <li>Portfolio</li></a>
+        <a href="#contact" v-smooth-scroll><li>Contact</li></a>
       </ul>
     </div>
   </div>

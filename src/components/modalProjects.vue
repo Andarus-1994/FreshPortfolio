@@ -6,7 +6,7 @@
         :href="link ? link : disabled"
         target="_blank"
         :class="link ? '' : 'disabled'"
-        >Visit <i class="fas">&#xf35d;</i>
+        >Visit <font-awesome-icon :icon="['fas', 'external-link-alt']" />
       </a>
       <p>{{ text }}</p>
       <div v-on:click="closeModal(id)" class="closeButton">&#10005;</div>
@@ -16,9 +16,10 @@
 </template>
 
 <script>
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 export default {
   name: "Modals",
-  components: {},
+  components: { FontAwesomeIcon },
   props: {
     id: Number,
     img: String,

@@ -1,6 +1,6 @@
 <template>
-  <div class="portfolio" id="portfolio">
-    <div class="triggerPortfolio" ref="triggerPortfolio"></div>
+  <div class="portfolio" id="portfolio" ref="triggerPortfolio">
+    <div class="triggerPortfolio"></div>
     <h1 v-if="showPortfolio">Portfolio - Personal Projects</h1>
     <ul v-if="showPortfolio">
       <li v-on:click="displayModal(projectDetails[0].id)">
@@ -116,7 +116,7 @@ export default {
   margin-top: 100px;
   padding-bottom: 100px;
   overflow: hidden;
-  min-height: 30vh;
+  min-height: 50vh;
 }
 
 .portfolio .triggerPortfolio {
@@ -166,6 +166,9 @@ export default {
 
 .portfolio > ul > li:nth-child(4) {
   animation: figure4 3s;
+}
+.portfolio > ul > li:nth-child(5) {
+  animation: figure4 3.5s;
 }
 .portfolio ul li img {
   background: rgb(43, 115, 128);

@@ -3,19 +3,20 @@
     <lines :number="20" />
     <h1>Hello, I'm <span>Andrei</span>.</h1>
     <h1>I'm a junior Web Developer.</h1>
-    <a href="#portfolio">
+    <a href="#portfolio" v-smooth-scroll>
       <div class="workButton">
-        View my work <i class="fas fa-arrow-right"></i>
+        View my work <font-awesome-icon :icon="['fas', 'arrow-right']" />
       </div>
     </a>
   </div>
 </template>
 
 <script>
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import lines from "./linesMain.vue";
 export default {
   name: "mainHeader",
-  components: { lines },
+  components: { lines, FontAwesomeIcon },
 };
 </script>
 
@@ -58,7 +59,7 @@ export default {
   z-index: 10;
 }
 
-.mainHeader .workButton i {
+.mainHeader .workButton svg {
   color: #59e2d9;
   transition: 0.6s;
   z-index: 20;
@@ -69,7 +70,7 @@ export default {
   border: 2px solid #59e2d9;
 }
 
-.mainHeader .workButton:hover i {
+.mainHeader .workButton:hover svg {
   color: black;
   transform: rotate(90deg);
 }
