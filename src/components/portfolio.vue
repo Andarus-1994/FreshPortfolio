@@ -16,10 +16,15 @@
         <h3>Recipes</h3>
       </li>
       <li v-on:click="displayModal(projectDetails[3].id)">
+        <img src="../assets/ticTac.jpg" alt="Xand0Game" />
+        <h3>X & O game</h3>
+      </li>
+      <li v-on:click="displayModal(projectDetails[4].id)">
         <img src="../assets/webcomerce.jpg" alt="Blog" />
         <h3>E-Commerce Shop</h3>
       </li>
-      <li v-on:click="displayModal(projectDetails[4].id)">
+
+      <li v-on:click="displayModal(projectDetails[5].id)">
         <img src="../assets/website.jpg" alt="designWebsite" />
         <h3>Website</h3>
       </li>
@@ -70,13 +75,19 @@ export default {
         },
         {
           id: 4,
+          img: "x&0.png",
+          text: "X & O game. Made using React. ",
+          link: "https://andarus-1994.github.io/Xand0/",
+        },
+        {
+          id: 5,
           img: "shopApp.jpg",
           text:
             "This is an web application for E-Commerce (online shop) and it is created using Laravel for Back End and React for Front End. I focused mostly on creating functionality and just a bit on design. It contains the following main functionalities: creating user account/reseting user's password (via email), display products, dashboard for the admin to add / remove products, payment method (using stripe).  ",
           link: "",
         },
         {
-          id: 5,
+          id: 6,
           img: "website.jpg",
           text: "Website design graphic example.  ",
           link: "",
