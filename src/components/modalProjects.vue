@@ -79,6 +79,9 @@ export default {
   color: white;
 }
 .modal img {
+  display: block;
+  background: rgb(18, 34, 53);
+  min-height: 20vh;
   max-height: 40vh;
   width: 100%;
   margin-bottom: 20px;

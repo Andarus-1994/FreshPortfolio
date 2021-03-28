@@ -92,6 +92,9 @@ body {
   10% {
     opacity: 0;
   }
+  80% {
+    opacity: 1;
+  }
   100% {
     opacity: 1;
   }
@@ -103,6 +106,9 @@ body {
   }
   20% {
     opacity: 0;
+  }
+  80% {
+    opacity: 1;
   }
   100% {
     opacity: 1;
@@ -116,6 +122,9 @@ body {
   30% {
     opacity: 0;
   }
+  80% {
+    opacity: 1;
+  }
   100% {
     opacity: 1;
   }
@@ -127,6 +136,9 @@ body {
   40% {
     opacity: 0;
   }
+  80% {
+    opacity: 1;
+  }
   100% {
     opacity: 1;
   }
@@ -134,10 +146,10 @@ body {
 
 @keyframes rotateEnter {
   0% {
-    transform: rotateY(100deg);
+    transform: rotateY(900deg);
   }
-  20% {
-    transform: rotateY(100deg);
+  10% {
+    transform: rotateY(90deg);
   }
   100% {
     transform: rotateY(0deg);
@@ -148,7 +160,7 @@ body {
   0% {
     transform: translateX(-200px);
   }
-  15% {
+  10% {
     transform: translateX(-200px);
   }
   100% {

@@ -110,7 +110,7 @@ export default {
             }
           });
         },
-        { threshold: 1 }
+        { threshold: 0.75 }
       );
       observer.observe(this.$refs.triggerPortfolio);
     },
@@ -165,20 +165,23 @@ export default {
 }
 
 .portfolio > ul > li:nth-child(1) {
-  animation: figure1 2s;
+  animation: figure1 1s;
 }
 .portfolio > ul > li:nth-child(2) {
-  animation: figure2 2.5s;
+  animation: figure2 1.5s;
 }
 
 .portfolio > ul > li:nth-child(3) {
-  animation: figure3 3s;
+  animation: figure3 2s;
 }
 
 .portfolio > ul > li:nth-child(4) {
-  animation: figure4 3s;
+  animation: figure4 2.5s;
 }
 .portfolio > ul > li:nth-child(5) {
+  animation: figure4 3s;
+}
+.portfolio > ul > li:nth-child(6) {
   animation: figure4 3.5s;
 }
 .portfolio ul li img {
