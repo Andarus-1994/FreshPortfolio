@@ -2,7 +2,7 @@
   <div class="mainHeader" id="home">
     <lines :number="20" />
     <h1>Hello, I'm <span>Andrei</span>.</h1>
-    <h1>I'm a junior Web Developer.</h1>
+    <h1>and I'm a Web Developer.</h1>
     <a href="#portfolio" v-smooth-scroll>
       <div class="workButton">
         View my work <font-awesome-icon :icon="['fas', 'arrow-right']" />
